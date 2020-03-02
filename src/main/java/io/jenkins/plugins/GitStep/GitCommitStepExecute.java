@@ -22,17 +22,17 @@ public class GitCommitStepExecute extends SynchronousNonBlockingStepExecution<St
     private transient EnvVars envVars;
     private transient Run run;
 
-    private String repoUrl = "https://github.com/Lemonlemmings/jenkins-test";
-    private String checkoutBranch = "master";
-    private String commitBranch = "test";
-    private String credentialsId = "lemonlemmings";
+    private String repoUrl;
+    private String checkoutBranch;
+    private String commitBranch;
+    private String credentialsId;
 
-    private String localDir = "/tmp/src";
-    private String remoteDir = "src";
-    private String message = "Jenkins Git Commit Test";
+    private String localDir;
+    private String remoteDir;
+    private String message;
 
-    private String tag = "1.0.0.0";
-    private String tagMessage = "Tagged by Jenkins Build";
+    private String tag;
+    private String tagMessage;
 
 
     protected GitCommitStepExecute(@Nonnull StepContext context) {
